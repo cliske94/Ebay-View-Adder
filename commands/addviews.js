@@ -5,7 +5,7 @@ module.exports = {
   description: "Adds views to ebay listing",
 
   slash: "both",
-  callback: ({ message, interaction }) => {
+  callback: ({ message }) => {
     if (!message.content.startsWith("!addviews")) return;
     const [, number, link] = message.content.split(" ");
     if (isNaN(number)) return "The first argument must be a number!";
